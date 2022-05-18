@@ -2,6 +2,10 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 16px;
+}
+body *{
+    box-sizing: border-box;
 }
 ul{
     margin: 0;
@@ -10,14 +14,28 @@ ul{
 a, button{
     cursor: pointer;
 }
+h1, h2{
+    margin: 0;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .button{
     border: none;
+}
+.container{
+    width: 1168px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 /*header*/
 
 .header{
-    box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 32px 0 25px;
@@ -35,7 +53,6 @@ a, button{
     height: 50px;
     width: 611px;
     padding: 0 5px 0 16px;
-    box-sizing: border-box;
 }
 .list__item{
     list-style: none;
@@ -55,18 +72,12 @@ a, button{
 .sale-section{
     background-image: url("../images/sale-section-background.png");
     height: 436px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
 }
 .sale-section h1{
-    margin: 0;
     font-size: 50px;
 }
 .sale-section h2{
-    margin: 0;
     font-size: 30px;
 }
 .timer{
@@ -78,8 +89,6 @@ a, button{
     font-size: 100px;
 }
 .timer-description{
-    //width: 100%;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     font-size: 24px;
@@ -87,8 +96,54 @@ a, button{
 }
 
 
-
-
-@media (min-width: 1201px) {
-
+.container.banner{
+    justify-content: space-between;
+    padding: 93px 100px 0 78px;
 }
+
+.container.banner h1{
+    font-size: 54px;
+    line-height: 60px;
+    width: 400px;
+}
+.container.banner p{
+    width: 394px;
+    line-height: 24px;
+}
+.banner__description img{
+    padding-top: 45px;
+    width: 192px;
+}
+.banner button{
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.banner-phone{
+    position: relative;
+    overflow: hidden;
+    width: 376px;
+    height: 548px;
+}
+.banner-phone img{
+    position: absolute;
+    display: block;
+    object-fit: fill;
+}
+.banner-phone-frame{
+    z-index: 1;
+    width: 376px;
+}
+.banner-phone-theme{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 322px;
+    height: 695px;
+    padding-top: 25px;
+}
+
