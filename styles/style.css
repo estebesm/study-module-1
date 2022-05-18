@@ -33,6 +33,27 @@ section{
     justify-content: center;
 }
 
+.phone{
+    position: relative;
+    overflow: hidden;
+}
+.phone img{
+    position: absolute;
+    display: block;
+    height: 100%;
+    object-fit: fill;
+}
+.phone__frame{
+    z-index: 1;
+}
+.phone__theme{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /*header*/
 
 .header{
@@ -122,28 +143,122 @@ section{
     margin-top: 3px;
     margin-right: 10px;
 }
-.banner-phone{
-    position: relative;
-    overflow: hidden;
+.banner .phone{
     width: 376px;
     height: 548px;
 }
-.banner-phone img{
-    position: absolute;
-    display: block;
-    object-fit: fill;
-}
-.banner-phone-frame{
-    z-index: 1;
+.banner .phone__frame{
     width: 376px;
 }
-.banner-phone-theme{
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+.banner .phone__theme{
     width: 322px;
     height: 695px;
     padding-top: 25px;
 }
 
+.features-section{
+    background-color: black;
+    color: white;
+}
+.features-section .container{
+    flex-direction: column;
+    align-items: center;
+    padding: 84px 0 100px;
+}
+.features-section h2{
+    font-size: 14px;
+}
+.features-section h1{
+    font-size: 32px;
+    width: 495px;
+    text-align: center;
+    padding-bottom: 29px;
+}
+.features-segments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.phone-segment{
+    position: relative;
+    background-color: white;
+    width: 379px;
+    height: 490px;
+    padding-top: 39px;
+    margin-top: 16px;
+    border-radius: 20px;
+}
+.phone-segment .phone{
+    width: 227px;
+    height: 300px;
+    margin: 0 auto;
+}
+.phone-segment .phone__frame{
+    width: 227px;
+}
+.phone-segment .phone__theme{
+    width: 194px;
+    padding-top: 15px;
+}
+.phone-description{
+    position: absolute;
+    bottom: 0;
+    width: 379px;
+    height: 197px;
+    background-color: #f2f2f2;
+    color: black;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+}
+.phone-description-icon{
+    margin: -32px auto 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-description p, .phone-description h3{
+    text-align: center;
+}
+
+.phone-description-icon.blue{
+    background-color: #0278ED;
+}
+.phone-description h3.blue{
+    color: #0278ED;
+}
+.phone-description-icon.red{
+    background-color: #FF5437;
+}
+.phone-description h3.red{
+    color: #FF5437;
+}
+.phone-description-icon.yellow{
+    background-color: #FF9209;
+}
+.phone-description h3.yellow{
+    color: #FF9209;
+}
+.phone-description-icon.pink{
+    background-color: #E738CE;
+}
+.phone-description h3.pink{
+    color: #E738CE;
+}
+.phone-description-icon.aqua{
+    background-color: #00C6DF;
+}
+.phone-description h3.blue{
+    color: #00C6DF;
+}
+.phone-description-icon.violet{
+    background-color: #B25DF8;
+}
+.phone-description h3.violet{
+    color: #B25DF8;
+}
+
+@media (min-width: 1201px) {
+
+}
