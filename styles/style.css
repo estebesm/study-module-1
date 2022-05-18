@@ -1,11 +1,11 @@
 body{
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
 }
 body *{
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 ul{
     margin: 0;
@@ -14,7 +14,7 @@ ul{
 a, button{
     cursor: pointer;
 }
-h1, h2{
+h1, h2, h3, h4{
     margin: 0;
 }
 section{
@@ -23,8 +23,10 @@ section{
     justify-content: center;
     align-items: center;
 }
-.button{
+button{
     border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .container{
     width: 1168px;
@@ -304,6 +306,7 @@ section{
 .technology__description h2{
     font-size: 14px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 .technology__description h1{
     font-size: 32px;
@@ -323,6 +326,85 @@ section{
 .technology-section .phone__theme{
     width: 323px;
     padding-top: 24px;
+}
+.pricing{
+    padding: 100px 0;
+}
+.pricing .container{
+    flex-direction: column;
+    align-items: center;
+}
+.pricing h1{
+    font-size: 32px;
+    color: #222222;
+}
+.pricing h2{
+    font-size: 14px;
+    color: #222222;
+}
+.pricing p{
+    width: 568px;
+    text-align: center;
+    padding-bottom: 41px;
+    color: #666666;
+}
+.prices{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.price-segment{
+    background-color: #f2f2f2;
+    width: 379px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.price__title{
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 12px;
+}
+.price{
+    letter-spacing: 8px;
+    font-size: 108px;
+    line-height: 124px;
+    position: relative;
+    top: -25px;
+}
+.price__title.blue, .price.blue{
+    color: #0278ED;
+}
+.price__title.yellow, .price.yellow{
+    color: #FF9209;
+}
+.price__title.red, .price.red{
+    color: #FF5437;
+}
+.price__period{
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.price-segment button{
+    margin: 20px 0 0;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+}
+.price-segment button.blue{
+    background-color: #0278ED;
+}
+.price-segment button.red{
+    background-color: #FF5437;
+}
+.price-segment button.yellow{
+    background-color: #FF9209;
 }
 @media (min-width: 1201px) {
 
