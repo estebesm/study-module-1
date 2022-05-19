@@ -36,6 +36,7 @@ button{
     color: #222222;
     font-size: 14px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .subtitle{
     color: #222222;
@@ -67,4 +68,7 @@ button{
     object-fit: cover;
     object-position: top;
 }
-
+.app-store{
+    display: block;
+    margin: 26px auto 0;
+}
