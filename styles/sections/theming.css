@@ -1,0 +1,27 @@
+.theming{
+    background-color: #222222;
+}
+.theming .container{
+    flex-direction: column;
+
+}
+.theming * {
+    color: #f2f2f2;
+}
+
+.theming__phone{
+    width: 600px;
+    border-bottom: 2px solid #f2f2f2;
+    margin: 0 auto;
+    padding-top: 36px;
+}
+.theming__phone img{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    object-fit: contain;
+}
+.theming__buttons{
+    padding-top: 42px;
+    margin: 0 auto;
+}
