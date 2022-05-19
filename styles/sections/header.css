@@ -28,11 +28,6 @@ header .container{
 .list__item{
     list-style: none;
 }
-.logo img{
-    border: none;
-    width: 120px;
-    height: 40px;
-}
 .button.get-app{
     background-color: black;
     color: white;

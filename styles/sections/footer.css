@@ -1,7 +1,7 @@
 footer{
     padding: 125px 0;
 }
-.footer__logo img{
+.footer__logo svg{
     display: block;
     margin: 0 auto;
 }
