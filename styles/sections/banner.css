@@ -1,0 +1,41 @@
+.banner{
+
+}
+.banner .container{
+    justify-content: space-between;
+    padding: 93px 100px 0 78px;
+}
+
+.banner h1{
+    font-size: 54px;
+    line-height: 60px;
+    width: 400px;
+}
+.banner p{
+    width: 394px;
+    line-height: 24px;
+}
+.banner__description img{
+    padding-top: 45px;
+    width: 192px;
+}
+.banner button{
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.banner .phone{
+    width: 376px;
+    height: 548px;
+}
+.banner .phone__frame{
+    width: 376px;
+}
+.banner .phone__theme{
+    width: 322px;
+    height: 695px;
+    padding-top: 25px;
+}

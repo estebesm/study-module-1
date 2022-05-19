@@ -1,0 +1,40 @@
+.technology{
+    padding: 100px 0 0;
+}
+.technology.smoke{
+    background-color: #f2f2f2;
+}
+.technology .container{
+    max-width: 1000px;
+    justify-content: space-between;
+}
+.technology__description{
+    width: 403px;
+    font-weight: 400;
+    padding-top: 77px;
+}
+.technology__description h2{
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.technology__description h1{
+    font-size: 32px;
+}
+.technology__description p{
+    font-size: 16px;
+}
+.technology .phone{
+    width: 376px;
+    height: 545px;
+    margin-left: 22px;
+}
+.technology .phone__frame{
+    width: 376px;
+    height: 545px;
+}
+.technology .phone__theme{
+    width: 323px;
+    padding-top: 24px;
+}

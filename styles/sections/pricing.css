@@ -1,0 +1,79 @@
+.pricing{
+
+}
+.pricing .container{
+    flex-direction: column;
+    align-items: center;
+}
+.pricing h1{
+    font-size: 32px;
+    color: #222222;
+}
+.pricing h2{
+    font-size: 14px;
+    color: #222222;
+}
+.pricing p{
+    width: 568px;
+    padding-bottom: 41px;
+    text-align: center;
+    color: #666666;
+}
+.prices{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.price-segment{
+    background-color: #f2f2f2;
+    width: 379px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.price__title{
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 12px;
+}
+.price{
+    letter-spacing: 8px;
+    font-size: 108px;
+    line-height: 124px;
+    position: relative;
+    top: -25px;
+}
+.price__title.blue, .price.blue{
+    color: #0278ED;
+}
+.price__title.yellow, .price.yellow{
+    color: #FF9209;
+}
+.price__title.red, .price.red{
+    color: #FF5437;
+}
+.price__period{
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.price-segment button{
+    margin: 20px 0 0;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+}
+.price-segment button.blue{
+    background-color: #0278ED;
+}
+.price-segment button.red{
+    background-color: #FF5437;
+}
+.price-segment button.yellow{
+    background-color: #FF9209;
+}
