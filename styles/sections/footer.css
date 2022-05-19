@@ -1,0 +1,14 @@
+footer{
+    padding: 125px 0;
+}
+.footer__logo img{
+    display: block;
+    margin: 0 auto;
+}
+.social-networks{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 112px;
+    padding-top: 26px;
+}

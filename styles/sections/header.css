@@ -1,10 +1,11 @@
-.header{
+header{
     background-color: white;
     position: sticky;
     top: 0;
     z-index: 2;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .15);
 }
-.header .container{
+header .container{
     width: 1200px;
     margin: 0 auto;
     padding: 0 32px 0 25px;
