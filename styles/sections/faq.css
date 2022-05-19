@@ -1,0 +1,33 @@
+.faq{
+    padding: 105px 110px;
+    background-color: #e5e5e5;
+    color: #222222;
+}
+
+.faq .container{
+    flex-direction: column;
+}
+.faq h1{
+    font-size: 32px;
+    line-height: 36px;
+}
+.faq h2{
+    font-size: 15px;
+    line-height: 20px;
+    padding: 13px 0 42px;
+}
+
+.faq__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 26px;
+    grid-row-gap: 16px;
+}
+
+.faq__question{
+    font-size: 18px;
+    line-height: 28px;
+}
+.faq__answer{
+    line-height: 24px;
+}
