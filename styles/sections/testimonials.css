@@ -1,0 +1,29 @@
+.testimonials.smoke{
+    background-color: #f2f2f2;
+}
+.testimonials .container{
+    flex-direction: column;
+}
+.testimonials__content{
+    display: flex;
+    justify-content: space-between;
+}
+.review{
+    width: 379px;
+    padding: 30px 37px 34px 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+.review p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+}
+.app-store-wrapper{
+    display: block;
+    margin: 0 auto;
+}
+.app-store{
+    display: block;
+    margin: 26px auto 0;
+}
