@@ -9,4 +9,5 @@ export const foo = () => {
     darkModeButton.addEventListener('click', () => {
         themingSection.classList.remove('light')
     })
+    console.log(Date.now())
 }

@@ -7,30 +7,52 @@
     justify-content: center;
     align-items: center;
 }
+
 .sale h1{
     font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
 }
 .sale h2{
     font-size: 30px;
 }
 .timer{
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    width: 729px;
+
 }
-.timer-counter{
+
+.timer__item{
+    width: 150px;
+    text-align: center;
+}
+.timer__item-divider{
+    width: 43px;
+    text-align: center;
+}
+
+.timer__item-count, .timer__item-description{
     display: block;
     margin: 0 auto;
-    height: 150px;
-    font-size: 100px;
-}
-.timer-description{
-    display: flex;
-    margin-right: 10px;
-}
-.timer-description-item{
-    display: block;
-    flex: calc(4 / 17);
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
     text-align: center;
+}
+
+.timer__item-count span, .timer__item-divider{
+    font-size: 100px;
+    line-height: 150px;
+    letter-spacing: 1.1px;
+}
+
+.timer__item-divider{
+
+}
+
+.timer__item-description{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 auto;
+
 }
