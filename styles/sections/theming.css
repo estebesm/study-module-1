@@ -1,17 +1,43 @@
 .theming{
     background-color: #222222;
 }
+.theming * {
+    color: #f2f2f2;
+}
+.theming .theming__phone{
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.theming.light{
+    background-color: white;
+}
+.theming.light * {
+    color: #222222;
+}
+
+.theming.light .theming__button.light path{
+    fill: #FF9209;
+}
+.theming.light .theming__button.dark path{
+    fill: #222222;
+}
+
+.theming.light .theming__phone{
+    border-bottom: 2px solid #222222;
+}
+
 .theming .container{
     flex-direction: column;
 
 }
-.theming * {
-    color: #f2f2f2;
+.theming .description{
+    width: 578px;
+    margin: 10px auto 0;
+    font-size: 18px;
 }
 
 .theming__phone{
     width: 600px;
-    border-bottom: 2px solid #f2f2f2;
     margin: 0 auto;
     padding-top: 36px;
 }
@@ -24,4 +50,8 @@
 .theming__buttons{
     padding-top: 42px;
     margin: 0 auto;
+}
+
+.color-orange{
+    color: #FF9209;
 }

@@ -17,7 +17,7 @@ header .container{
     height: 90px;
     width: inherit;
 }
-.list{
+.header__list{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +25,7 @@ header .container{
     width: 611px;
     padding: 0 5px 0 16px;
 }
-.list__item{
+.header__list-item{
     list-style: none;
 }
 .button.get-app{

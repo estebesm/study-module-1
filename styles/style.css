@@ -42,9 +42,7 @@ button{
     color: #222222;
     font-size: 32px;
 }
-.subtitle.orange{
-    color: #FF9209;
-}
+
 .description{
     color: #666666;
 }
@@ -71,5 +69,6 @@ button{
     object-fit: cover;
     object-position: top;
 }
+
 
 
