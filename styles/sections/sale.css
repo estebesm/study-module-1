@@ -25,12 +25,14 @@
 }
 
 .timer__item{
-    width: 150px;
+    width: 20.6%;
     text-align: center;
 }
 .timer__item-divider{
-    width: 43px;
+    width: 5.9%;
     text-align: center;
+    position: relative;
+    bottom: 8px;
 }
 
 .timer__item-count, .timer__item-description{

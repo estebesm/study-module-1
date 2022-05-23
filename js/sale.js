@@ -1,16 +1,18 @@
 import config from "/config.json" assert {type: "json"};
 
-const countOfDays = document.getElementById('timer__days')
-const countOfHours = document.getElementById('timer__hours')
-const countOfMinutes = document.getElementById('timer__minutes')
-const countOfSeconds = document.getElementById('timer__seconds')
-
-const endDate = config.timerEndDate.split(/\W/)
-
 export const saleTimeCounter = () => {
-    setInterval(() => {
-        const countDownDate = new Date(+endDate[2], +endDate[1] - 1 , +endDate[0], +endDate[3], +endDate[4]).getTime()
 
+    const countOfDaysBlock = document.getElementById('timer__days')
+    const countOfHoursBlock = document.getElementById('timer__hours')
+    const countOfMinutesBlock = document.getElementById('timer__minutes')
+    const countOfSecondsBlock = document.getElementById('timer__seconds')
+
+    const endDate = config.timerEndDate.split(/\W/)
+    const [endDay, endMonth, endYear, endHour, endMinute] = endDate
+
+    const countDownDate = new Date(+endYear, +endMonth - 1 , +endDay, +endHour, +endMinute).getTime()
+
+    const interval = setInterval(() => {
         const now = new Date().getTime()
 
         const distance = countDownDate - now
@@ -25,11 +27,16 @@ export const saleTimeCounter = () => {
         const currentMinute = (minutes >= 10 ? '' : "0") + minutes.toString()
         const currentSecond = (seconds >= 10 ? '' : "0") + seconds.toString()
 
+        countOfDaysBlock.innerHTML = currentDay
+        countOfHoursBlock.innerHTML = currentHour
+        countOfMinutesBlock.innerHTML = currentMinute
+        countOfSecondsBlock.innerHTML = currentSecond
 
-        countOfDays.innerHTML = currentDay
-        countOfHours.innerHTML = currentHour
-        countOfMinutes.innerHTML = currentMinute
-        countOfSeconds.innerHTML = currentSecond
+        if(distance < 0){
+            clearInterval(interval)
+            document.querySelector('.sale').remove()
+        }
 
     }, 1000)
+
 }

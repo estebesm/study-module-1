@@ -9,12 +9,124 @@
 
     <link href="./styles/style.css" rel="stylesheet" type="text/css">
     <link href="./styles/sections.css" rel="stylesheet" type="text/css">
+    <link href="./styles/modal.css" rel="stylesheet" type="text/css">
 
     <script type="module" src="js/app.js"></script>
 
     <title>H(app)y</title>
 </head>
 <body>
+    <dialog class="modal-wrapper">
+        <div class="modal">
+            <h3 class="modal__title">
+                Leave a request for the purchase of goods
+            </h3>
+            <form>
+                <fieldset>
+                    <label class="modal__text-input-wrapper">
+                        <input class="modal__text-input" type="text" value="John Doe">
+                    </label>
+                    <label class="modal__text-input-wrapper">
+                        <input class="modal__text-input" type="text" value="John Doe">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Your plan?
+                    </legend>
+                    <div>
+                        <div class="modal__plan blue">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                            </svg>
+                            <input type="radio" id="modal__standard" name="interest">
+                            <label for="modal__standard">
+                                Standard
+                            </label>
+                        </div>
+                        <div class="modal__plan orange">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                            </svg>
+                            <input type="radio" id="modal__premium" name="interest">
+                            <label for="modal__premium">
+                                Premium
+                            </label>
+                        </div>
+                        <div class="modal__plan red">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                            </svg>
+                            <input type="radio" id="modal__lifetime" name="interest">
+                            <label for="modal__lifetime">
+                                Lifetime
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        How did you know about our app?
+                    </legend>
+                    <div class="modal__social-networks">
+                        <div class="modal__social-networks__item">
+                            <input type="checkbox" id="modal__facebook" name="interest">
+                            <label for="modal__facebook">
+                                <span class="modal__checkbox-wrapper">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Facebook
+                                </span>
+                            </label>
+                        </div>
+                        <div class="modal__social-networks__item">
+                            <input type="checkbox" id="modal__instagram" name="interest">
+                            <label for="modal__instagram">
+                                <span class="modal__checkbox-wrapper">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Instagram
+                                </span>
+                            </label>
+                        </div>
+                        <div class="modal__social-networks__item">
+                            <input type="checkbox" id="modal__youtube" name="interest">
+                            <label for="modal__youtube">
+                                <span class="modal__checkbox-wrapper">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Youtube
+                                </span>
+                            </label>
+                        </div>
+                        <div class="modal__social-networks__item">
+                            <input type="checkbox" id="modal__other" name="interest">
+                            <label for="modal__other">
+                                <span class="modal__checkbox-wrapper">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Other
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <input class="button" type="submit" value="send">
+            </form>
+        </div>
+    </dialog>
     <header>
         <div class="container">
             <nav class="header__nav">

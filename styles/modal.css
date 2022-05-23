@@ -1,0 +1,139 @@
+.modal-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.modal{
+    width: 506px;
+    //height: 500px;
+    overflow: scroll;
+    position: relative;
+    top: -22px;
+    background-color: white;
+    padding: 3px 0 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.modal fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.modal legend{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal__title{
+    font-size: 20px;
+    line-height: 30px;
+    width: 312px;
+    text-align: center;
+    padding: 35px;
+}
+.modal__text-input-wrapper{
+    margin: 8px 0;
+}
+.modal__text-input{
+    width: 330px;
+    padding: 9px 17px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.modal__plan{
+    display: flex;
+    text-align: center;
+    margin: 11px 0;
+    position: relative;
+}
+.modal__plan svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.modal__plan label{
+    display: block;
+    width: 330px;
+    padding: 9px 15px;
+    border-radius: 4px;
+}
+.modal__plan.blue input~label{
+    border: 1px solid #0278ED;
+    color: #0278ED;
+}
+.modal__plan.orange input~label{
+    border: 1px solid #FF5437;
+    color: #FF5437;
+}
+.modal__plan.red input~label{
+    border: 1px solid #FF9209;
+    color: #FF9209;
+}
+
+.modal__plan input:checked~label{
+    color: white;
+}
+
+.modal__plan.blue input:checked~label{
+    background-color: #0278ED;
+}
+.modal__plan.orange input:checked~label{
+    background-color: #FF5437;
+}
+.modal__plan.red input:checked~label{
+    background-color: #FF9209;
+}
+
+.modal__plan input{
+    display: none;
+}
+
+.modal__social-networks input{
+    display: none;
+}
+.modal__social-networks__item{
+    display: flex;
+    margin: 15px 0;
+}
+.modal__social-networks label{
+    display: flex;
+    align-items: center;
+}
+.modal__social-networks .modal__checkbox-wrapper svg{
+    display: none;
+}
+.modal__social-networks input:checked~label .modal__checkbox-wrapper svg{
+    display: block;
+}
+.modal__checkbox-wrapper{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #0278ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 19px;
+}
+
+.modal .button{
+    display: block;
+    padding: 10px 65px;
+    margin: 27px auto 0;
+}
