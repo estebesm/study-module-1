@@ -34,6 +34,7 @@
     width: 578px;
     margin: 10px auto 0;
     font-size: 18px;
+    line-height: 24px;
 }
 
 .theming__phone{
@@ -48,10 +49,10 @@
     object-fit: contain;
 }
 .theming__buttons{
-    padding-top: 42px;
+    padding: 40px 5px 0;
     margin: 0 auto;
 }
 
-.color-orange{
-    color: #FF9209;
+.theming__marked{
+    color: #FF9209 !important;
 }

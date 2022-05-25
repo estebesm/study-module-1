@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
 
     <link href="./styles/style.css" rel="stylesheet" type="text/css">
     <link href="./styles/sections.css" rel="stylesheet" type="text/css">
@@ -16,115 +17,136 @@
     <title>H(app)y</title>
 </head>
 <body>
-    <dialog class="modal-wrapper">
-        <div class="modal">
-            <h3 class="modal__title">
-                Leave a request for the purchase of goods
-            </h3>
-            <form>
-                <fieldset>
-                    <label class="modal__text-input-wrapper">
-                        <input class="modal__text-input" type="text" value="John Doe">
-                    </label>
-                    <label class="modal__text-input-wrapper">
-                        <input class="modal__text-input" type="text" value="John Doe">
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>
-                        Your plan?
-                    </legend>
-                    <div>
-                        <div class="modal__plan blue">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
-                            </svg>
-                            <input type="radio" id="modal__standard" name="interest">
-                            <label for="modal__standard">
-                                Standard
-                            </label>
+    <dialog class="dialog">
+        <div class="modal-wrapper">
+            <div class="modal">
+                <button class="modal__close-button">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.67398 8.99998L0.836975 15.837L2.16297 17.163L8.99998 10.326L15.837 17.163L17.163 15.837L10.326 8.99998L17.163 2.16297L15.837 0.836975L8.99998 7.67398L2.16297 0.836975L0.836975 2.16297L7.67398 8.99998Z" fill="#222222"/>
+                    </svg>
+                </button>
+                <h3 class="modal__title">
+                    Leave a request for the purchase of goods
+                </h3>
+                <form>
+                    <fieldset>
+                        <label class="modal__text-input-wrapper">
+                            <input class="modal__text-input" type="text" value="" placeholder="name" id="modal__name">
+                            <span class="modal__text-input__error-message">
+                                this field is required*
+                            </span>
+                        </label>
+                        <label class="modal__text-input-wrapper">
+                            <input class="modal__text-input" type="text" value="" placeholder="email" id="modal__email">
+                            <span class="modal__text-input__error-message">
+                                this field is required*
+                            </span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__plan-field">
+                        <legend>
+                            Your plan?
+                        </legend>
+                        <div>
+                            <div class="modal__plan blue">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                                </svg>
+                                <input type="radio" id="modal__standard" name="interest">
+                                <label for="modal__standard">
+                                    Standard
+                                </label>
+                            </div>
+                            <div class="modal__plan orange">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                                </svg>
+                                <input type="radio" id="modal__premium" name="interest">
+                                <label for="modal__premium">
+                                    Premium
+                                </label>
+                            </div>
+                            <div class="modal__plan red">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
+                                </svg>
+                                <input type="radio" checked="checked" id="modal__lifetime" name="interest">
+                                <label for="modal__lifetime">
+                                    Lifetime
+                                </label>
+                            </div>
                         </div>
-                        <div class="modal__plan orange">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
-                            </svg>
-                            <input type="radio" id="modal__premium" name="interest">
-                            <label for="modal__premium">
-                                Premium
-                            </label>
+                    </fieldset>
+                    <fieldset class="modal__social-networks-field">
+                        <legend>
+                            How did you know about our app?
+                        </legend>
+                        <div class="modal__social-networks">
+                            <div class="modal__social-networks__item">
+                                <input type="checkbox" id="modal__facebook" name="interest">
+                                <label for="modal__facebook">
+                                    <span class="modal__checkbox-wrapper">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Facebook
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="modal__social-networks__item">
+                                <input type="checkbox" id="modal__instagram" name="interest">
+                                <label for="modal__instagram">
+                                    <span class="modal__checkbox-wrapper">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Instagram
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="modal__social-networks__item">
+                                <input type="checkbox" id="modal__youtube" name="interest">
+                                <label for="modal__youtube">
+                                    <span class="modal__checkbox-wrapper">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Youtube
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="modal__social-networks__item">
+                                <input type="checkbox" id="modal__other" name="interest">
+                                <label for="modal__other">
+                                    <span class="modal__checkbox-wrapper">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Other
+                                    </span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="modal__plan red">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="white"/>
-                            </svg>
-                            <input type="radio" id="modal__lifetime" name="interest">
-                            <label for="modal__lifetime">
-                                Lifetime
-                            </label>
-                        </div>
+                    </fieldset>
+                    <input class="modal__submit" type="submit" value="send">
+                    <div class="modal__loading">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 18H12V15C12 13.9 11.6083 12.9583 10.825 12.175C10.0417 11.3917 9.1 11 8 11C6.9 11 5.95833 11.3917 5.175 12.175C4.39167 12.9583 4 13.9 4 15V18ZM15 20H1C0.716667 20 0.479 19.904 0.287 19.712C0.0956668 19.5207 0 19.2833 0 19C0 18.7167 0.0956668 18.4793 0.287 18.288C0.479 18.096 0.716667 18 1 18H2V15C2 13.9833 2.23767 13.029 2.713 12.137C3.18767 11.2457 3.85 10.5333 4.7 10C3.85 9.46667 3.18767 8.754 2.713 7.862C2.23767 6.97067 2 6.01667 2 5V2H1C0.716667 2 0.479 1.904 0.287 1.712C0.0956668 1.52067 0 1.28333 0 1C0 0.716667 0.0956668 0.479 0.287 0.287C0.479 0.0956666 0.716667 0 1 0H15C15.2833 0 15.5207 0.0956666 15.712 0.287C15.904 0.479 16 0.716667 16 1C16 1.28333 15.904 1.52067 15.712 1.712C15.5207 1.904 15.2833 2 15 2H14V5C14 6.01667 13.7627 6.97067 13.288 7.862C12.8127 8.754 12.15 9.46667 11.3 10C12.15 10.5333 12.8127 11.2457 13.288 12.137C13.7627 13.029 14 13.9833 14 15V18H15C15.2833 18 15.5207 18.096 15.712 18.288C15.904 18.4793 16 18.7167 16 19C16 19.2833 15.904 19.5207 15.712 19.712C15.5207 19.904 15.2833 20 15 20Z" fill="#7E7E7E"/>
+                        </svg>
+                        <span>
+                            loading...
+                        </span>
                     </div>
-                </fieldset>
-                <fieldset>
-                    <legend>
-                        How did you know about our app?
-                    </legend>
-                    <div class="modal__social-networks">
-                        <div class="modal__social-networks__item">
-                            <input type="checkbox" id="modal__facebook" name="interest">
-                            <label for="modal__facebook">
-                                <span class="modal__checkbox-wrapper">
-                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Facebook
-                                </span>
-                            </label>
-                        </div>
-                        <div class="modal__social-networks__item">
-                            <input type="checkbox" id="modal__instagram" name="interest">
-                            <label for="modal__instagram">
-                                <span class="modal__checkbox-wrapper">
-                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Instagram
-                                </span>
-                            </label>
-                        </div>
-                        <div class="modal__social-networks__item">
-                            <input type="checkbox" id="modal__youtube" name="interest">
-                            <label for="modal__youtube">
-                                <span class="modal__checkbox-wrapper">
-                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Youtube
-                                </span>
-                            </label>
-                        </div>
-                        <div class="modal__social-networks__item">
-                            <input type="checkbox" id="modal__other" name="interest">
-                            <label for="modal__other">
-                                <span class="modal__checkbox-wrapper">
-                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z" fill="#0278ED"/>
-                                    </svg>
-                                </span>
-                                <span>
-                                    Other
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-                <input class="button" type="submit" value="send">
-            </form>
+                </form>
+            </div>
         </div>
     </dialog>
     <header>
@@ -143,6 +165,16 @@
                                 <stop offset="1" stop-color="#1ECCAE"/>
                             </linearGradient>
                         </defs>
+                    </svg>
+                </button>
+                <button class="header__close-button">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.67391 9.00001L0.836914 15.837L2.16291 17.163L8.99991 10.326L15.8369 17.163L17.1629 15.837L10.3259 9.00001L17.1629 2.16301L15.8369 0.837006L8.99991 7.67401L2.16291 0.837006L0.836914 2.16301L7.67391 9.00001Z" fill="#222222"/>
+                    </svg>
+                </button>
+                <button class="header__burger">
+                    <svg class="header__burger" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 0.5H17.25V2H0.75V0.5ZM0.75 7.25H17.25V8.75H0.75V7.25ZM0.75 14H17.25V15.5H0.75V14Z" fill="#222222"/>
                     </svg>
                 </button>
                 <ul class="header__list">
@@ -186,7 +218,7 @@
             <div class="timer">
                 <div class="timer__item">
                     <div class="timer__item-count">
-                        <span id="timer__days">14</span>
+                        <span id="timer__days">00</span>
                     </div>
                     <span class="timer__item-description">
                         days
@@ -195,7 +227,7 @@
                 <div class="timer__item-divider">|</div>
                 <div class="timer__item">
                     <div class="timer__item-count">
-                        <span id="timer__hours">26</span>
+                        <span id="timer__hours">00</span>
                     </div>
                     <span class="timer__item-description">
                         hours
@@ -204,7 +236,7 @@
                 <div class="timer__item-divider">|</div>
                 <div class="timer__item">
                     <div class="timer__item-count">
-                        <span id="timer__minutes">26</span>
+                        <span id="timer__minutes">00</span>
                     </div>
                     <span class="timer__item-description">
                         minutes
@@ -213,7 +245,7 @@
                 <div class="timer__item-divider">|</div>
                 <div class="timer__item">
                     <div class="timer__item-count">
-                        <span id="timer__seconds">26</span>
+                        <span id="timer__seconds">00</span>
                     </div>
                     <span class="timer__item-description">
                         seconds
@@ -244,7 +276,7 @@
                         The H(app)y app is the latest & greatest in phone photography.
                         It's available in the App Store right now. Go check it out!
                     </p>
-                    <button>
+                    <button class="buy-now">
                         BUY NOW
                     </button>
                     <button>
@@ -473,7 +505,7 @@
                     dark mode
                 </h1>
                 <h2 class="subtitle">
-                    Also available in <span class="subtitle color-orange">dark</span>.
+                    Also available in <span class="subtitle theming__marked">dark</span>.
                 </h2>
                 <p class="description">
                     Don't get blinded when using the H(app)y app at night,
@@ -521,7 +553,7 @@
                         <h4 class="price__period">
                             monthly
                         </h4>
-                        <button class="blue">
+                        <button class="buy-now blue">
                             buy now
                         </button>
                     </div>
@@ -535,7 +567,7 @@
                         <h4 class="price__period">
                             monthly
                         </h4>
-                        <button class="red">
+                        <button class="buy-now red">
                             buy now
                         </button>
                     </div>
@@ -549,7 +581,7 @@
                         <h4 class="price__period">
                             monthly
                         </h4>
-                        <button class="yellow">
+                        <button class="buy-now yellow">
                             buy now
                         </button>
                     </div>

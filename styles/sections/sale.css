@@ -10,18 +10,21 @@
 
 .sale h1{
     font-size: 50px;
-    font-weight: bold;
+    line-height: 75px;
+    font-weight: 700;
     letter-spacing: 1.1px;
 }
 .sale h2{
     font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 .timer{
     font-weight: 700;
     display: flex;
     justify-content: center;
-    width: 729px;
-
+    width: 765px;
 }
 
 .timer__item{
@@ -29,10 +32,10 @@
     text-align: center;
 }
 .timer__item-divider{
-    width: 5.9%;
+    width: 5.7%;
     text-align: center;
     position: relative;
-    bottom: 8px;
+    top: 2px;
 }
 
 .timer__item-count, .timer__item-description{
@@ -48,13 +51,15 @@
 }
 
 .timer__item-divider{
-
+    margin: 0 20px;
 }
 
 .timer__item-description{
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
+    letter-spacing: 1.5px;
     margin: 0 auto;
-
+    position: relative;
+    bottom: 10px;
 }

@@ -8,6 +8,16 @@
     display: flex;
     justify-content: space-between;
 }
+.testimonials .title{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+.testimonials .subtitle{
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: -4px;
+}
 .review{
     width: 379px;
     padding: 30px 37px 34px 30px;

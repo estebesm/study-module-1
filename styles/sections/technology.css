@@ -15,15 +15,18 @@
 }
 .technology__description h2{
     font-size: 14px;
+    line-height: 24px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 .technology__description h1{
     font-size: 32px;
+    line-height: 36px;
 }
 .technology__description p{
     font-size: 16px;
+    line-height: 24px;
 }
 .technology .phone{
     width: 376px;

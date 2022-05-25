@@ -1,5 +1,5 @@
 .faq{
-    padding: 105px 0;
+    padding: 115px 0 105px;
     background-color: #e5e5e5;
     color: #222222;
 }
@@ -14,14 +14,12 @@
 .faq h2{
     font-size: 15px;
     line-height: 20px;
-    padding: 13px 0 42px;
+    padding: 13px 0 38px;
 }
 
 .faq__content{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 26px;
-    grid-row-gap: 16px;
 }
 
 .faq__question{
