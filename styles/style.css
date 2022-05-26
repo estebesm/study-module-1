@@ -77,4 +77,10 @@ input, input:active, input:focus{
     object-position: top;
 }
 
+@media (max-width: 767px){
+    .container{
+        max-width: 720px;
+    }
+
+}
 

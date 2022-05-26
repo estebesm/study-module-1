@@ -1,0 +1,135 @@
+.technology{
+    padding: 100px 0 0;
+}
+.technology.smoke{
+    background-color: #f2f2f2;
+}
+.technology .container{
+    max-width: 940px;
+    justify-content: space-between;
+}
+.technology__description{
+    width: 403px;
+    font-weight: 400;
+    padding-top: 77px;
+}
+.technology__description h2{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.technology__description h1{
+    font-size: 32px;
+    line-height: 36px;
+}
+.technology__description p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.technology .phone{
+    width: 376px;
+    height: 545px;
+    margin-left: 22px;
+    position: relative;
+    left: 80px;
+}
+.technology.smoke .phone{
+    left: 0;
+}
+.technology.smoke .technology__description{
+    position: relative;
+    left: 80px;
+}
+.technology .phone__frame{
+    width: 376px;
+    height: 545px;
+}
+.technology .phone__theme{
+    width: 323px;
+    padding-top: 24px;
+}
+
+@media (max-width: 1092px){
+    .technology .phone{
+        left: 0;
+    }
+    .technology.smoke .technology__description{
+        left: 0;
+    }
+}
+@media (max-width: 992px) {
+    .technology{
+        padding: 0;
+    }
+    .technology.smoke .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .technology .container{
+        display: block;
+    }
+    .technology__description{
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .technology.smoke .technology__description{
+        position: static;
+    }
+
+    .technology__description h1, .technology__description h2{
+        text-align: center;
+    }
+    .technology__description p{
+        max-width: 720px;
+        margin: 30px 0;
+    }
+    .technology .phone{
+        margin: 0 auto;
+        position: static;
+    }
+
+    .technology .phone__theme{
+        height: 545px;
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .technology{
+        padding: 0;
+    }
+    .technology .container{
+        display: block;
+    }
+    .technology__description{
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    .technology__description h1, .technology__description h2{
+        text-align: center;
+    }
+    .technology__description p{
+        max-width: 500px;
+        margin: 20px auto 20px;
+    }
+    .technology .phone{
+        width: 200px;
+        height: 300px;
+        margin: 0 auto;
+        position: static;
+    }
+    .technology .phone__frame{
+        width: 200px;
+        height: 300px;
+    }
+    .technology .phone__theme{
+        width: 172px;
+        height: 300px;
+        padding-top: 13px;
+    }
+}

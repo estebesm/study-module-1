@@ -224,3 +224,33 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 767px) {
+    dialog{
+        padding: 0 !important;
+        border: none;
+    }
+    .modal-wrapper{
+        width: 100%;
+        height: 100vh;
+    }
+    .modal{
+        width: 100%;
+        min-height: 100vh;
+        background-color: white;
+    }
+    .modal fieldset{
+        width: 100%;
+        padding: 0;
+    }
+    .modal__plan{
+        width: 280px;
+    }
+    .modal__plan label{
+        width: 100%;
+    }
+    .modal__social-networks{
+        margin-top: 20px;
+    }
+
+}

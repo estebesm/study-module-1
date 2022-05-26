@@ -5,6 +5,7 @@
 .features .container{
     flex-direction: column;
     align-items: center;
+    max-width: 1208px;
 }
 .features h2{
     font-size: 14px;
@@ -21,7 +22,7 @@
 .features-segments{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -31,7 +32,7 @@
     width: 379px;
     height: 490px;
     padding-top: 39px;
-    margin-top: 16px;
+    margin: 16px 8px 0;
     border-radius: 20px;
 }
 .phone-segment .phone{
@@ -114,4 +115,91 @@
 }
 .phone-description h3.violet{
     color: #B25DF8;
+}
+
+@media (max-width: 992px) {
+    .phone-segment{
+        width: 300px;
+        height: 388px;
+    }
+    .phone-description{
+        width: 300px;
+        height: 156px;
+    }
+    .phone-description-icon{
+        width: 40px;
+        height: 40px;
+    }
+    .phone-description svg{
+        width: 16px;
+        height: 16px;
+    }
+    .phone-description h3{
+        padding: 8px 0 4px;
+    }
+    .phone-description p{
+        width: 284px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .features{
+        padding: 50px 0;
+    }
+    .features h1{
+        font-size: 24px;
+        line-height: 24px;
+        width: 300px;
+        padding: 10px 0;
+    }
+    .features h2{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .phone-segment{
+        width: 90%;
+        max-width: 300px;
+        height: 279px;
+        padding-top: 20px;
+    }
+    .phone-description{
+        width: 100%;
+        height: 120px;
+    }
+    .phone-description-icon{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        bottom: 15px;
+        margin: 0 auto;
+    }
+    .phone-description svg{
+        width: 14px;
+        height: 14px;
+    }
+    .phone-description h3{
+        margin-top: -15px;
+        padding: 0;
+        font-size: 14px;
+    }
+    .phone-description p{
+        width: 200px;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 14px;
+
+    }
+    .phone-segment .phone{
+        width: 150px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .phone-segment .phone__frame{
+        width: 150px;
+    }
+    .phone-segment .phone__theme{
+        width: 132px;
+        padding-top: 10px;
+    }
 }

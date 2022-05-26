@@ -1,0 +1,127 @@
+.sale{
+    background-image: url("../../../images/sale-section-background.png");
+    height: 436px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sale h1{
+    font-size: 50px;
+    line-height: 75px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+.sale h2{
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.timer{
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    width: 765px;
+    position: relative;
+    right: 7px;
+    bottom: 4px;
+}
+
+.timer__item{
+    width: 20.6%;
+    text-align: center;
+}
+.timer__item-divider{
+    width: 5.7%;
+    text-align: center;
+    position: relative;
+    top: 2px;
+}
+
+.timer__item-count, .timer__item-description{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer__item-count span, .timer__item-divider{
+    font-size: 100px;
+    line-height: 150px;
+    letter-spacing: 1.1px;
+}
+
+.timer__item-divider{
+    margin: 0 20px;
+}
+
+.timer__item-description{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .sale{
+        height: 320px;
+    }
+    .sale h1{
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .sale h2{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .timer{
+        padding-top: 10px;
+        width: 500px;
+    }
+    .timer__item-count span, .timer__item-divider{
+        font-size: 75px;
+        line-height: 100px;
+    }
+    .timer__item-description{
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sale{
+        height: 200px;
+    }
+    .sale h1{
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .sale h2{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .timer{
+        padding-top: 10px;
+        width: 300px;
+    }
+    .timer__item-count span, .timer__item-divider{
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 32px;
+    }
+    .timer__item-divider{
+        margin: 0 0 10px;
+    }
+    .timer__item-description{
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+}

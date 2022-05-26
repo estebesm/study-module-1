@@ -1,0 +1,95 @@
+.banner{
+
+}
+.banner .container{
+    justify-content: space-between;
+    padding: 48px 10px 0 0;
+    flex-wrap: wrap;
+}
+
+.banner h1{
+    font-size: 54px;
+    line-height: 60px;
+    width: 400px;
+    padding: 6px 0 4px;
+}
+.banner p{
+    width: 394px;
+    line-height: 24px;
+}
+.banner__description{
+    padding: 86px 0 0 0;
+    margin: 0 auto;
+}
+.banner__description img{
+    padding-top: 70px;
+    width: 192px;
+}
+.banner button{
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.banner .phone{
+    width: 376px;
+    height: 548px;
+    margin: 46px auto 0;
+}
+.banner .phone__frame{
+    width: 376px;
+}
+.banner .phone__theme{
+    width: 322px;
+    height: 695px;
+    padding-top: 25px;
+}
+
+@media (max-width: 767px) {
+    .banner .container{
+        padding: 0;
+        flex-direction: column;
+    }
+    .banner h1{
+        font-size: 24px;
+        line-height: 30px;
+        width: auto;
+        text-align: center;
+        padding: 6px 0 4px;
+    }
+    .banner p{
+        width: auto;
+        text-align: center;
+        line-height: 20px;
+    }
+    .banner__description{
+        padding: 30px 0;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .banner__description svg{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        right: 20px;
+    }
+    .banner__description button{
+        margin: 10px;
+    }
+    .banner .phone{
+        width: 233px;
+        height: 340px;
+        margin: 0 auto 0;
+    }
+    .banner .phone__frame{
+        width: 233px;
+    }
+    .banner .phone__theme{
+        width: 200px;
+        object-fit: contain;
+        padding-top: 15px;
+    }
+}

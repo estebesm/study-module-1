@@ -1,11 +1,14 @@
-@import url(./sections/achievements.css);
-@import url(./sections/banner.css);
-@import url(./sections/features.css);
-@import url(./sections/header.css);
-@import url(./sections/pricing.css);
-@import url(./sections/sale.css);
-@import url(./sections/technology.css);
-@import url(./sections/testimonials.css);
-@import url(./sections/faq.css);
-@import url(./sections/footer.css);
-@import url(./sections/theming.css);
+@import url(sections/achievements/achievements.css);
+@import url(sections/banner/banner.css);
+@import url(sections/features/features.css);
+
+@import url(sections/header/header.css);
+@import url(sections/header/header-tablet.css);
+
+@import url(sections/pricing/pricing.css);
+@import url(sections/sale/sale.css);
+@import url(sections/technology/technology.css);
+@import url(sections/testimonials/testimonials.css);
+@import url(sections/faq/faq.css);
+@import url(sections/footer/footer.css);
+@import url(sections/theming/theming.css);
