@@ -27,10 +27,10 @@ export const saleTimeCounter = () => {
         const currentMinute = (minutes >= 10 ? '' : "0") + minutes.toString()
         const currentSecond = (seconds >= 10 ? '' : "0") + seconds.toString()
 
-        countOfDaysBlock.innerHTML = currentDay
-        countOfHoursBlock.innerHTML = currentHour
-        countOfMinutesBlock.innerHTML = currentMinute
-        countOfSecondsBlock.innerHTML = currentSecond
+        countOfDaysBlock.textContent = currentDay
+        countOfHoursBlock.textContent = currentHour
+        countOfMinutesBlock.textContent = currentMinute
+        countOfSecondsBlock.textContent = currentSecond
 
         if(distance < 0){
             clearInterval(interval)

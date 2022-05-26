@@ -53,13 +53,13 @@
     position: relative;
     top: -25px;
 }
-.price__title.blue, .price.blue{
+.price__title.pricing__standard, .price.pricing__standard{
     color: #0278ED;
 }
-.price__title.yellow, .price.yellow{
+.price__title.pricing__lifetime, .price.pricing__lifetime{
     color: #FF9209;
 }
-.price__title.red, .price.red{
+.price__title.pricing__premium, .price.pricing__premium{
     color: #FF5437;
 }
 .price__period{
@@ -76,13 +76,13 @@
     font-size: 14px;
     line-height: 18px;
 }
-.price-segment button.blue{
+.price-segment button.pricing__standard{
     background-color: #0278ED;
 }
-.price-segment button.red{
+.price-segment button.pricing__premium{
     background-color: #FF5437;
 }
-.price-segment button.yellow{
+.price-segment button.pricing__lifetime{
     background-color: #FF9209;
 }
 

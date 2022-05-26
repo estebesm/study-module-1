@@ -21,6 +21,13 @@
         background-color: white;
         height: 100vh;
         width: 100vw;
+        animation: .3s open-header-menu;
+    }
+    header .container::before{
+        content: "";
+        position: relative;
+        display: block;
+        height: 70px;
     }
     .header__nav.opened .header__burger{
         display: none;
@@ -48,5 +55,14 @@
     }
     .header__nav.opened .get-app{
         margin-top: 43px;
+    }
+}
+
+@keyframes open-header-menu {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
     }
 }

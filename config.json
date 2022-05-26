@@ -1,6 +1,6 @@
 {
   "plans": [
-    { "name": "standart", "price": 9 },
+    { "name": "standard", "price": 9 },
     { "name": "premium", "price": 99 },
     { "name": "lifetime", "price": 149 }
   ],
