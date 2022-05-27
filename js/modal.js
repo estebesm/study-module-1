@@ -17,7 +17,20 @@ const isEmailCorrect = (email) => {
     return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 }
 
-const openModalWindow = () => {
+const checkTypeOfPlan = (elem) => {
+    if(elem.classList.contains('pricing__premium')){
+        return 'premium';
+    }
+    if(elem.classList.contains('pricing__standard')){
+        return 'standard';
+    }
+    return 'lifetime'
+
+}
+
+const openModalWindow = (classList) => {
+    const selectedPlanInput = document.getElementById(`modal__${checkTypeOfPlan(classList)}`);
+    selectedPlanInput.checked = true;
     modalWindow.style.display = 'block';
     htmlBody.style.overflow = 'hidden';
 }
@@ -65,6 +78,8 @@ export const runModalWindow = () => {
         }
     })
 
-    openModalWindowButtons.forEach(button => button.addEventListener('click', openModalWindow))
+    openModalWindowButtons.forEach(button => {
+        button.addEventListener('click', () => openModalWindow(button))
+    })
     closeModalWindowButton.addEventListener('click', closeModalWindow)
 }
