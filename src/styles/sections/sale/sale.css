@@ -2,10 +2,13 @@
     background-image: url("../../../assets/images/sale-section-background.png");
     height: 436px;
     color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.sale.opened{
+    display: flex;
 }
 
 .sale h1{

@@ -5,7 +5,7 @@ const darkModeButton = document.querySelector('.theming__button.dark')
 const markedSpan = document.querySelector('.theming__marked')
 const title = document.querySelector('.theming .title')
 
-export const foo = () => {
+export const theme = () => {
     lightModeButton.addEventListener('click', () => {
         themingSection.classList.add('light');
         markedSpan.textContent = 'light';

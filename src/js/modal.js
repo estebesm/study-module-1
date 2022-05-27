@@ -1,11 +1,11 @@
 const openModalWindowButtons = document.querySelectorAll('.buy-now');
 const closeModalWindowButton = document.querySelector('.modal__close-button');
 const submitButton = document.querySelector('.modal__submit');
-const modalForm = document.querySelector('.modal form')
-const loadingBlock = document.querySelector('.modal__loading')
+const modalForm = document.querySelector('.modal form');
+const loadingBlock = document.querySelector('.modal__loading');
 
-const modalInputName = document.getElementById('modal__name')
-const modalInputEmail = document.getElementById('modal__email')
+const modalInputName = document.getElementById('modal__name');
+const modalInputEmail = document.getElementById('modal__email');
 
 const modalWindow = document.querySelector('.dialog');
 const htmlBody = document.querySelector('body');
@@ -39,6 +39,47 @@ const closeModalWindow = () => {
     htmlBody.style.overflow = null;
 }
 
+const getSelectedPlan = () => {
+    let plan = null;
+    document.querySelectorAll('.modal__plan input').forEach(item => {
+        if(item.checked){
+            plan = item.value;
+        }
+    })
+    return plan;
+}
+const getSelectedSocialNetworks = () => {
+    let socialNetworks = []
+    document.querySelectorAll('.modal__social-networks-field input').forEach(item => {
+        if(item.checked){
+            socialNetworks.push(item.value);
+        }
+    })
+    return socialNetworks;
+}
+const getName = (modalInputName) => {
+    return modalInputName.value;
+}
+const getEmail = (modalInputEmail) => {
+    return modalInputEmail.value;
+}
+
+const getDataFromDocument = () => {
+    return {
+        name: getName(modalInputName),
+        email: getEmail(modalInputEmail),
+        plan: getSelectedPlan(),
+        socialNetworks: getSelectedSocialNetworks()
+    }
+}
+const sendDataToServer = () => {
+    setTimeout(() => {
+        setStylesAfterSendingData();
+        console.log(getDataFromDocument());
+        closeModalWindow();
+    }, 3000)
+}
+
 const setStylesBeforeSendingData = () => {
     loadingBlock.style.display = 'flex';
     submitButton.disabled = true;
@@ -64,22 +105,18 @@ export const runModalWindow = () => {
     modalForm.addEventListener('submit', e => {
         e.preventDefault()
     })
-
     submitButton.addEventListener('click', () => {
         if(isNameCorrect(modalInputName.value) && isEmailCorrect(modalInputEmail.value)) {
-            setStylesBeforeSendingData()
-            setTimeout(() => {
-                setStylesAfterSendingData()
-                closeModalWindow()
-            }, 3000)
+            setStylesBeforeSendingData();
+            sendDataToServer();
         }
         else{
-            setErrorStyles()
+            setErrorStyles();
         }
     })
 
     openModalWindowButtons.forEach(button => {
-        button.addEventListener('click', () => openModalWindow(button))
+        button.addEventListener('click', () => openModalWindow(button));
     })
-    closeModalWindowButton.addEventListener('click', closeModalWindow)
+    closeModalWindowButton.addEventListener('click', closeModalWindow);
 }
