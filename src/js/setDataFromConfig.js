@@ -1,4 +1,4 @@
-import config from "/config.json" assert {type: "json"};
+import config from "/src/config.json" assert {type: "json"};
 
 const setPlans = (plans) => {
     plans.forEach(plan => {
