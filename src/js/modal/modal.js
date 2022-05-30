@@ -1,21 +1,13 @@
+import {clearTextInputs, getEmail, getName, isValidatedTextInput, validateTextInput} from "./validateTextInput.js";
+
 const openModalWindowButtons = document.querySelectorAll('.buy-now');
 const closeModalWindowButton = document.querySelector('.modal__close-button');
 const submitButton = document.querySelector('.modal__submit');
 const modalForm = document.querySelector('.modal form');
 const loadingBlock = document.querySelector('.modal__loading');
 
-const modalInputName = document.getElementById('modal__name');
-const modalInputEmail = document.getElementById('modal__email');
-
 const modalWindow = document.querySelector('.dialog');
 const htmlBody = document.querySelector('body');
-
-const isNameCorrect = (name) => {
-    return /(\w+) (\w+)/.test(name)
-}
-const isEmailCorrect = (email) => {
-    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
-}
 
 const checkTypeOfPlan = (elem) => {
     if(elem.classList.contains('pricing__premium')){
@@ -57,61 +49,43 @@ const getSelectedSocialNetworks = () => {
     })
     return socialNetworks;
 }
-const getName = (modalInputName) => {
-    return modalInputName.value;
-}
-const getEmail = (modalInputEmail) => {
-    return modalInputEmail.value;
-}
 
 const getDataFromDocument = () => {
     return {
-        name: getName(modalInputName),
-        email: getEmail(modalInputEmail),
+        name: getName(),
+        email: getEmail(),
         plan: getSelectedPlan(),
         socialNetworks: getSelectedSocialNetworks()
     }
 }
 const sendDataToServer = () => {
+    setStylesBeforeSendingData();
     setTimeout(() => {
         setStylesAfterSendingData();
         console.log(getDataFromDocument());
         closeModalWindow();
+        clearTextInputs()
     }, 3000)
 }
 
 const setStylesBeforeSendingData = () => {
     loadingBlock.style.display = 'flex';
     submitButton.disabled = true;
-    modalInputName.classList.remove('error');
-    modalInputEmail.classList.remove('error');
-    modalInputName.nextElementSibling.style.display = modalInputName.value === '' ? 'block' : 'none';
-    modalInputEmail.nextElementSibling.style.display = modalInputEmail.value === '' ? 'block' : 'none';
 }
 const setStylesAfterSendingData = () => {
     loadingBlock.style.display = 'none';
     submitButton.disabled = false;
 }
 
-const setErrorStyles = () => {
-    modalInputName.classList.add(!isNameCorrect(modalInputName.value) && 'error');
-    modalInputEmail.classList.add(!isEmailCorrect(modalInputEmail.value) && 'error');
-
-    modalInputName.nextElementSibling.style.display = modalInputName.value === '' ? 'block' : 'none'
-    modalInputEmail.nextElementSibling.style.display = modalInputEmail.value === '' ? 'block' : 'none'
-}
-
 export const runModalWindow = () => {
     modalForm.addEventListener('submit', e => {
         e.preventDefault()
     })
+
     submitButton.addEventListener('click', () => {
-        if(isNameCorrect(modalInputName.value) && isEmailCorrect(modalInputEmail.value)) {
-            setStylesBeforeSendingData();
-            sendDataToServer();
-        }
-        else{
-            setErrorStyles();
+        validateTextInput();
+        if(isValidatedTextInput() && getSelectedSocialNetworks().length>0){
+            sendDataToServer()
         }
     })
 

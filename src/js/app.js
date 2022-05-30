@@ -1,9 +1,9 @@
 import {theme} from "./theme.js";
 import {saleTimeCounter} from "./sale.js";
-import {runModalWindow} from "./modal.js";
+import {runModalWindow} from "./modal/modal.js";
 import {header} from "./header.js";
 import {setDataFromConfig} from "./setDataFromConfig.js";
-import "../styles/main.css";
+import "../styles/main.css" assert {type: 'css'};
 
 const app = () => {
     setDataFromConfig();

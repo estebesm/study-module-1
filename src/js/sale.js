@@ -1,61 +1,52 @@
 import config from "../config.json" assert {type: "json"};
 
-const getCountOfDays = distance => Math.floor(distance / (1000 * 60 * 60 * 24));
-const getCountOfHours = distance => Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const getCountOfMinutes = distance => Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-const getCountOfSeconds = distance => Math.floor((distance % (1000 * 60)) / 1000);
+const parseDate = (date) => {
+    const endDate = date.split(/\W/)
+    const [endDay, endMonth, endYear, endHour, endMinute] = endDate
+    return new Date(+endYear, +endMonth - 1 , +endDay, +endHour, +endMinute).getTime()
+}
 
-const getDistance = (currentTime, countDownTime) => countDownTime - currentTime;
-
-const getTotalTime = (countDownDate) => {
+const getDistance = () => {
     const now = new Date().getTime();
-
-    const distance = getDistance(now, countDownDate);
-
-    const countOfDays = getCountOfDays(distance);
-    const countOfHours = getCountOfHours(distance);
-    const countOfMinutes = getCountOfMinutes(distance);
-    const countOfSeconds = getCountOfSeconds(distance);
-
-    const days = countOfDays.toString().padStart(2, "0");
-    const hours = countOfHours.toString().padStart(2, "0");
-    const minutes = countOfMinutes.toString().padStart(2, "0");
-    const seconds = countOfSeconds.toString().padStart(2, "0");
-
-    return [days, hours, minutes, seconds]
+    return parseDate(config.timerEndDate) - now
 }
 
-const isTimePassed = (countDownDate) => {
-    return getDistance(new Date().getTime(), countDownDate) < 0
+const getTimerItem = (type) => {
+    const distance = getDistance();
+    const formulas = {
+        days: distance / (1000 * 60 * 60 * 24),
+        hours: (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        minutes: (distance % (1000 * 60 * 60)) / (1000 * 60),
+        seconds: (distance % (1000 * 60)) / 1000
+    }
+    return Math.floor(formulas[type]).toString().padStart(2, "0");
 }
 
+const isTimePassed = () => getDistance() < 0
 
 export const saleTimeCounter = () => {
-    const countOfDaysBlock = document.getElementById('timer__days')
-    const countOfHoursBlock = document.getElementById('timer__hours')
-    const countOfMinutesBlock = document.getElementById('timer__minutes')
-    const countOfSecondsBlock = document.getElementById('timer__seconds')
+    const saleSection = document.querySelector('section.sale');
+    const timerTypes = ['days', 'hours', 'minutes', 'seconds']
 
-    const endDate = config.timerEndDate.split(/\W/)
-    const [endDay, endMonth, endYear, endHour, endMinute] = endDate
+    let timerItems = []
+    timerTypes.forEach(type => {
+        timerItems.push({
+            element: document.getElementById(`timer__${type}`),
+            type
+        })
+    })
 
-    const countDownDate = new Date(+endYear, +endMonth - 1 , +endDay, +endHour, +endMinute).getTime()
-
-    if(!isTimePassed(countDownDate)) {
-        document.querySelector('section.sale').classList.add('opened');
+    if(!isTimePassed()) {
+        saleSection.classList.add('opened');
         const interval = setInterval(() => {
-            if (isTimePassed(countDownDate)) {
+            if (isTimePassed()) {
                 clearInterval(interval)
                 document.querySelector('.sale').remove()
             }
-
-            const [days, hours, minutes, seconds] = getTotalTime(countDownDate)
-            countOfDaysBlock.textContent = days
-            countOfHoursBlock.textContent = hours
-            countOfMinutesBlock.textContent = minutes
-            countOfSecondsBlock.textContent = seconds
+            timerItems.forEach(item => {
+                item.element.textContent = getTimerItem(item.type)
+            })
 
         }, 1000)
     }
-
 }
