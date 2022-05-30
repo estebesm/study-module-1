@@ -54,6 +54,7 @@
         padding: 9px 0;
     }
     .header__nav.opened .get-app{
+        display: block;
         margin-top: 43px;
     }
 }

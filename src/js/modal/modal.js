@@ -64,8 +64,12 @@ const sendDataToServer = () => {
         setStylesAfterSendingData();
         console.log(getDataFromDocument());
         closeModalWindow();
-        clearTextInputs()
-    }, 3000)
+        clearTextInputs();
+        document.querySelectorAll('.modal__social-networks-field input').forEach(item => {
+            item.checked = false;
+        });
+
+    }, 3000);
 }
 
 const setStylesBeforeSendingData = () => {
@@ -93,4 +97,8 @@ export const runModalWindow = () => {
         button.addEventListener('click', () => openModalWindow(button));
     })
     closeModalWindowButton.addEventListener('click', closeModalWindow);
+    document.querySelector('.modal-wrapper').addEventListener('click', closeModalWindow);
+    document.querySelector('.modal').addEventListener('click', e => {
+        e.stopPropagation()
+    })
 }
