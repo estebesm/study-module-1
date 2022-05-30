@@ -1,5 +1,6 @@
 .theming{
     background-color: #222222;
+    animation: 1s theming-appearance-dark;
 }
 .theming * {
     color: #f2f2f2;
@@ -10,6 +11,7 @@
 
 .theming.light{
     background-color: white;
+    animation: 1s theming-appearance-light;
 }
 .theming.light * {
     color: #222222;
@@ -88,5 +90,22 @@
     .theming__buttons{
         padding: 20px 5px 0;
         margin: 0 auto;
+    }
+}
+
+@keyframes theming-appearance-dark{
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: black;
+    }
+}
+@keyframes theming-appearance-light{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: white;
     }
 }
