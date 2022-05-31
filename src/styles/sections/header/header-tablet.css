@@ -6,8 +6,18 @@
         height: 70px;
     }
     .header__burger{
-        padding: 0;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+    }
+    .header__burger:focus{
+        border: 1px solid #5AB0FF;
+    }
+    .header__burger:hover{
+        background-color: #E5E5E5;
     }
     .header__list{
         display: none;

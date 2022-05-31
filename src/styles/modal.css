@@ -166,6 +166,13 @@
     align-items: center;
     cursor: pointer;
 }
+.modal__social-networks-field.error::after{
+    content: 'this field is required*';
+    display: block;
+    padding-left: 11px;
+    padding-top: 4px;
+    color: #FF5437;
+}
 .modal__social-networks .modal__checkbox-wrapper svg{
     display: none;
 }

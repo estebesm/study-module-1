@@ -1,8 +1,6 @@
 const modalInputName = document.getElementById('modal__name');
 const modalInputEmail = document.getElementById('modal__email');
 
-let eventListenerAdded = false
-
 const errorMessage = (value) => {
     if(value.length === 0) return 'required field*'
     if(value.length < 3) return 'should be more then 3 symbols*'
@@ -38,7 +36,6 @@ export const clearTextInputs = () => {
 }
 
 export const validateTextInput = () => {
-    if(!eventListenerAdded) {
         [modalInputName, modalInputEmail].forEach(element => {
             if (errorMessage(element.value)) {
                 setErrorStyles(element)
@@ -52,6 +49,4 @@ export const validateTextInput = () => {
                 if (errorMessage(element.value)) setErrorStyles(element)
             })
         })
-    }
-    eventListenerAdded = true
 }

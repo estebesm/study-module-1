@@ -35,6 +35,16 @@ button{
     padding: 0;
 }
 
+.button:hover, .app-store-button.button.get-app:hover{
+    background-color: #4E4E4E;
+}
+.button:active{
+    scale: 0.98;
+}
+.button:focus{
+    outline: 2px solid #5AB0FF;
+}
+
 input, input:active, input:focus{
     border: none;
 }
