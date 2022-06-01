@@ -3,7 +3,7 @@ const modalInputEmail = document.getElementById('modal__email');
 
 const errorMessage = (value) => {
     if(value.length === 0) return 'required field*'
-    if(value.length < 3) return 'should be more then 3 symbols*'
+    if(value.length < 4) return 'should be more then 3 symbols*'
     return ''
 }
 

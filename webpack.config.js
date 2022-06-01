@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: "./src/js/app.js",
     output: {
         filename: "bundle.[contenthash].js",
@@ -37,6 +37,12 @@ module.exports = {
                 use: [
                     MiniCssExtractWebpackPlugin.loader,
                     "css-loader"
+                ]
+            },
+            {
+                test: /\.(png | jpg | svg | gif)$/,
+                use: [
+                    'file-loader'
                 ]
             }
         ]

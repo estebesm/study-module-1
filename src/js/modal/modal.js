@@ -107,9 +107,8 @@ export const runModalWindow = () => {
                 checkSocialNetworks();
             })
         })
-        if(isValidatedTextInput() || checkSocialNetworks()){
-            if(checkSocialNetworks())
-                sendDataToServer();
+        if(checkSocialNetworks() && isValidatedTextInput()){
+            sendDataToServer();
         }
     });
 

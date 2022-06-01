@@ -3,7 +3,7 @@ import {saleTimeCounter} from "./sale.js";
 import {runModalWindow} from "./modal/modal.js";
 import {header} from "./header.js";
 import {setDataFromConfig} from "./setDataFromConfig.js";
-import "../styles/main.css" assert {type: 'css'};
+import "../styles/main.css";
 
 const app = () => {
     setDataFromConfig();
