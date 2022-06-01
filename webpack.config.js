@@ -52,5 +52,9 @@ module.exports = {
             new CssMinimizerWebpackPlugin(),
             "..."
         ]
+    },
+    devServer: {
+        port: 5000,
+
     }
 }

@@ -4,8 +4,9 @@
   "description": "module 1 project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
     "build": "webpack --config webpack.config.js",
-    "start-prod": "npm run build && cd build && serve -l 3000"
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,6 @@
     "mini-css-extract-plugin": "^2.6.0",
     "serve": "^13.0.2",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
+    "webpack-dev-server": "^4.9.1"
   }
 }
