@@ -2,11 +2,14 @@
     padding: 100px 0 0;
 }
 .technology.smoke{
+    position: static;
     background-color: #f2f2f2;
 }
 .technology .container{
     max-width: 940px;
     justify-content: space-between;
+    position: relative;
+    right: 32px;
 }
 .technology__description{
     width: 403px;
@@ -52,6 +55,20 @@
 }
 
 @media (max-width: 1092px){
+    .technology, .technology.smoke{
+        position: static;
+        padding-top: 0;
+    }
+    .technology .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+        left: 0;
+    }
+    .technology.smoke .container{
+        flex-direction: column-reverse;
+    }
     .technology .phone{
         left: 0;
     }

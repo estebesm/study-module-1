@@ -1,5 +1,5 @@
 .features{
-    background-color: black;
+    background-color: #222222;
     color: white;
 }
 .features .container{
@@ -80,40 +80,40 @@
     text-align: center;
 }
 
-.phone-description-icon.blue{
+.phone-description-icon.features__block__calendar{
     background-color: #0278ED;
 }
-.phone-description h3.blue{
+.phone-description h3.features__block__calendar{
     color: #0278ED;
 }
-.phone-description-icon.red{
+.phone-description-icon.features__block__lists{
     background-color: #FF5437;
 }
-.phone-description h3.red{
+.phone-description h3.features__block__lists{
     color: #FF5437;
 }
-.phone-description-icon.yellow{
+.phone-description-icon.features__block__varied-type{
     background-color: #FF9209;
 }
-.phone-description h3.yellow{
+.phone-description h3.features__block__varied-type{
     color: #FF9209;
 }
-.phone-description-icon.pink{
+.phone-description-icon.features__block__split-screen{
     background-color: #E738CE;
 }
-.phone-description h3.pink{
+.phone-description h3.features__block__split-screen{
     color: #E738CE;
 }
-.phone-description-icon.aqua{
+.phone-description-icon.features__block__uploads{
     background-color: #00C6DF;
 }
-.phone-description h3.aqua{
+.phone-description h3.features__block__uploads{
     color: #00C6DF;
 }
-.phone-description-icon.violet{
+.phone-description-icon.features__block__focus-mode{
     background-color: #B25DF8;
 }
-.phone-description h3.violet{
+.phone-description h3.features__block__focus-mode{
     color: #B25DF8;
 }
 

@@ -1,6 +1,7 @@
 .theming{
     background-color: #222222;
     animation: 1s theming-appearance-dark;
+    padding-bottom: 158px;
 }
 .theming * {
     color: #f2f2f2;
