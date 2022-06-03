@@ -5,10 +5,9 @@
 }
 
 .achievements .container{
-    padding: 80px 50px 100px;
+    padding: 80px 90px 100px;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 960px;
     margin: 0 auto;
 }
 .achievement{
@@ -22,10 +21,23 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
+    position: relative;
+    top: 5px;
+    text-transform: uppercase;
     font-weight: 400;
     text-align: center;
 }
 
+@media (max-width: 1092px) {
+    .achievements .container{
+        padding: 80px 50px 100px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+}
 @media(max-width: 992px){
     .achievement h1{
         font-size: 72px;

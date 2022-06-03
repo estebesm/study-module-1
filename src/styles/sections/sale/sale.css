@@ -98,33 +98,39 @@
 
 @media (max-width: 576px) {
     .sale{
-        height: 200px;
+        height: auto;
     }
     .sale h1{
-        margin-top: 24px;
-        font-size: 20px;
-        line-height: 30px;
+        margin: 90px auto 15px;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+
     }
     .sale h2{
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 27px;
+        padding-bottom: 40px;
     }
     .timer{
         padding-top: 10px;
+        padding-bottom: 80px;
         width: 300px;
     }
     .timer__item-count span, .timer__item-divider{
-        font-size: 24px;
-        font-weight: bold;
-        line-height: 32px;
+        font-size: 40px;
+        font-weight: normal;
+        line-height: 60px;
     }
     .timer__item-divider{
-        margin: 0 0 10px;
+        margin: 0 0 8px;
+        position: relative;
+        bottom: 20px;
     }
     .timer__item-description{
         font-size: 12px;
-        line-height: 24px;
-        font-weight: 400;
+        line-height: 18px;
+        font-weight: 700;
         padding-top: 10px;
     }
 }

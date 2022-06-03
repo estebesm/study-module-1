@@ -3,6 +3,8 @@ import config from "../config.json" assert {type: "json"};
 const setPlans = (plans) => {
     plans.forEach(plan => {
         const priceElement = document.querySelector(`.price.pricing__${plan.name}`);
+        const priceTitle = document.querySelector(`.price__title.pricing__${plan.name}`);
+        priceTitle.textContent = `${plan.name}`
         priceElement.textContent = `$${plan.price}`;
     })
 }
@@ -25,6 +27,7 @@ const setAppStoreLink = (link) => {
 }
 
 export const setDataFromConfig = () => {
+    //console.log(config.plans.map(plan => plan.name))
     setPlans(config.plans);
     setTestimonials(config.testimonials);
     setAppStoreLink(config.appStoreLink);
